@@ -6,13 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor( ) { }
-
-  // ionViewWillEnter() {
-  //   this.authService.getToken().then(() => {
-  //     if(this.authService.isLoggedIn) {
-  //       this.navCtrl.navigateRoot('/dashboard');
-  //     }
-  //   });
-  // }
+  constructor() {}
 }

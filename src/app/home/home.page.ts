@@ -13,11 +13,14 @@ export class HomePage {
 
   ngOnInit(){ 
     this.platform.ready().then(() => {
-      const browser = this.inApp.create('www.ddfreshmart.com','_self',{location:'no', zoom:'no'});
-      browser.on('exit').subscribe(() => {
-        // this.platform.exitApp();   
-        navigator['app'].exitApp();      
-      });
+      //const browser = this.inApp.create('www.ddfreshmart.com','_self',{location:'no', zoom:'no'});
+      const browser = this.inApp.create('http://www.ddfreshmart.com','_blank',{location:'no', zoom:'no',navigationbuttoncolor: '#ffffff',
+      hideurlbar: 'yes'});
+      // browser.on('exit').subscribe(() => {
+      //   // this.platform.exitApp();   
+      //   navigator['app'].exitApp();      
+      // });
+      browser.show();
     });
   }
 
