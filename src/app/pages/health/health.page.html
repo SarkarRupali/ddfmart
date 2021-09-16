@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="backbtn">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="logo">
+      <img src="../../../../assets/imgs/logo.png">
+    </div>
+    <ion-buttons slot="end" class="logout" (click) = "logout()">
+      <ion-icon name="power-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="card-background-page"> 
+  <div class="dashboard">
+    <div class="register-con">
+      <ion-grid>
+        <ion-row>
+          <ion-col [routerLink]="['/medical-list']">
+            <ion-card>
+              <ion-title>Doctor</ion-title>
+            </ion-card>
+          </ion-col>
+          <ion-col [routerLink]="['/help-line']">
+            <ion-card>
+              <ion-title>Ambulance</ion-title>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col>
+            <ion-card [routerLink]="['/help-line']">
+              <ion-title>Blood Examine Center</ion-title>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card [routerLink]="['/help-line']">
+              <ion-title>Medicine Home De</ion-title>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-card [routerLink]="['/help-line']">
+              <ion-title>Medicine Shop</ion-title>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card [routerLink]="['/help-line']">
+              <ion-title>Door Step Service</ion-title>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-card [routerLink]="['/help-line']">
+              <ion-title>Nursing Home</ion-title>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card [routerLink]="['/help-line']">
+              <ion-title>Homeopathe</ion-title>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>  
+    </div>
+  </div>
+</ion-content> 
+
+

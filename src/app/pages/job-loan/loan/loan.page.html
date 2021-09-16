@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="logo">
+      <img src="../../../../assets/imgs/logo.png">
+    </div>
+    <ion-buttons slot="end" class="logout" (click) = "logout()">
+      <ion-icon name="power-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="dashboard">
+    <div class="register-con">
+      <ion-card>
+        <ion-list padding >
+          <ion-buttons [routerLink]="['/help-line']" class="btnadd btnjob">3 Months Tellearing Free</ion-buttons>
+          <ion-buttons [routerLink]="['/help-line']" class="btnadd">3 Months Beauty Parlour Care Free</ion-buttons>
+        </ion-list>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
+
+
+

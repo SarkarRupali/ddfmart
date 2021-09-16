@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="logo">
+      <img src="../../../assets/imgs/logo.png">
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="registar">
+    <div class="register-con">
+      <div class="reg-icon">
+        <img src="../../../assets/imgs/padlock.png">
+      </div>
+      <h4 class="titel">register</h4>
+      <form [formGroup]="registration_frm">
+        <div class="form-box">
+          <div class="form-list">
+            <ion-item>
+              <ion-label>
+                <ion-icon name="person-outline"></ion-icon>
+              </ion-label>
+              <ion-input type="text"  placeholder="Name" formControlName='name'></ion-input>
+            </ion-item>
+          </div>
+          <div *ngFor="let error of validation_messages.name">
+            <ng-container *ngIf="name.hasError(error.type) && (name.dirty || name.touched)">
+              <small class="error-message">{{error.message}}</small>
+            </ng-container>
+          </div>
+        
+          <div class="form-list">
+            <ion-item>
+              <ion-label>
+                <ion-icon name="person-circle-outline"></ion-icon>
+              </ion-label>
+              <ion-input type="text" placeholder="UserName" formControlName='uName'></ion-input>
+            </ion-item>
+          </div>
+          <div *ngFor="let error of validation_messages.uName">
+            <ng-container *ngIf="uName.hasError(error.type) && (uName.dirty || uName.touched)">
+              <small class="error-message">{{error.message}}</small>
+            </ng-container>
+          </div>
+
+          <div class="form-list">
+            <ion-item>
+              <ion-label>
+                  <ion-icon name="mail-outline"></ion-icon>
+              </ion-label>
+              <ion-input type="text" placeholder="Email" formControlName='email'></ion-input>
+            </ion-item>
+          </div>
+          <div *ngFor="let error of validation_messages.email">
+            <ng-container *ngIf="email.hasError(error.type) && (email.dirty || email.touched)">
+              <small class="error-message">{{error.message}}</small>
+            </ng-container>
+          </div>
+
+          <div class="form-list">
+            <ion-item >
+              <ion-label>
+                <ion-icon name="lock-closed-outline"></ion-icon>
+              </ion-label>
+              <ion-input type="password"  placeholder="Password" formControlName='password'></ion-input>
+            </ion-item>
+          </div>
+          <div *ngFor="let error of validation_messages.password">
+            <!-- <ng-container *ngIf="password.hasError(error.type) && (password.dirty || password.touched)">
+              <small class="error-message">{{error.message}}</small>
+            </ng-container> -->
+            <ng-container *ngIf="registration_frm.get('password').hasError(error.type) && (registration_frm.get('password').dirty || registration_frm.get('password').touched)">
+              <small class="error-message">{{error.message}}</small>
+            </ng-container>
+          </div>
+
+          <div class="form-list">
+            <ion-item >
+              <ion-label>
+                <ion-icon name="lock-closed-outline"></ion-icon>
+              </ion-label>
+              <ion-input type="password"  placeholder=" Confirm Password" formControlName='cpassword'></ion-input>
+            </ion-item>
+          </div>
+          <div>
+            <ng-container *ngFor="let error of validation_messages.cpassword">
+              <div *ngIf="registration_frm.get('cpassword').hasError(error.type) && (registration_frm.get('cpassword').dirty || registration_frm.get('cpassword').touched)">
+                <small class="error-message">{{ error.message }}</small>
+              </div>
+            </ng-container>
+            <div *ngIf="!registration_frm.get('cpassword').errors && registration_frm.hasError('passwordNotMatch') && (registration_frm.get('cpassword').dirty || registration_frm.get('cpassword').touched)">
+              <small class="error-message">Password and Confirm Password fields should match</small>
+            </div>
+          </div>
+
+          <div class="form-list">
+            <ion-item>
+              <ion-label>
+                <ion-icon name="call-outline"></ion-icon>
+              </ion-label>
+              <ion-input type="tell" placeholder="Mobile" formControlName='phNo'></ion-input>
+            </ion-item>
+          </div>
+          <div *ngFor="let error of validation_messages.phNo">
+            <ng-container *ngIf="phNo.hasError(error.type) && (phNo.dirty || phNo.touched)">
+              <small class="error-message">{{error.message}}</small>
+            </ng-container>
+          </div>
+
+          <div class="form-listbtn">
+            <button type="submit"  [disabled]="!registration_frm.valid" 
+            (click)="submitForm()">Register</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

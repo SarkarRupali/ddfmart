@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="logo">
+      <img src="../../../../assets/imgs/logo.png">
+    </div>
+    <ion-buttons slot="end" class="logout" (click) = "logout()">
+      <ion-icon name="power-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="dashboard">
+    <div class="register-con">
+      <img src="../../../../assets/imgs/thank-you.png">
+      <h3 class="titel">Thank You</h3>
+     
+      <div class="form-listbtn">
+        <button class="book" expand="block" (click)="pay()">
+          <!-- <a href="upi://pay?pa=subhankar6661@ibl&pn=Subhankar Saha&cu=INR" class="upi-pay1">Pay Now !</a> -->
+          <a href="upi://pay?pa=maji21@ybl&pn=Chanchal Majhi&cu=INR" class="upi-pay1">Pay Now !</a>
+        </button>
+        <button class="book" expand="block">
+          <a href="https://api.whatsapp.com/send?phone=8798081614">Send Message</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</ion-content>

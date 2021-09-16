@@ -1,0 +1,104 @@
+.dashboard {
+  background: #d4d6d60f;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard::before{
+  content: "";
+  width: 70px;
+  height: 70px;
+  border-radius: 85px;
+  background-color: rgba(24, 183, 187, 0.2);
+  position: absolute;
+  top: 24%;
+  left: 0px;
+  transform: translate(-10px, -24%);
+}
+.dashboard::after{
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 85px;
+  background-color: rgba(246, 211, 93, 0.4);
+  position: absolute;
+  bottom: 9%;
+  right: -10px;
+  transform: translate(-10px, -41%);
+  z-index: -1;
+}
+.logo{
+  text-align: center;
+  width: 224px;
+  margin: 0 auto;
+}
+.dashboard ion-col {
+  margin: 10px 5px;
+  margin-top: 0px;
+}
+.dashboard .card-title {
+  color: #000 !important;
+  font-size: 20px;
+}
+.dashboard ion-title {
+  color: #3d024c;
+  padding: 0px;
+  font-size: 16px;
+}
+.register-con {
+  padding: 10% 0;
+  width: 84%;
+  margin: 0 auto;
+}
+.button-native {
+  color: #3b024c;
+}
+.titel{
+    font-size: 18px;
+    text-align: center;
+    color: #000;text-transform: uppercase;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+.form-listbtn button{
+  width: 100%;
+  height: 54px;
+  background-image: linear-gradient(to left top, #19c5c9, #19c7cb, #19c8cd, #19cacf, #19ccd1);
+  border: 0px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 4px;
+    margin-top: 30px;
+}
+.dashboard .button-native{
+    background: #f6d35d  !important;
+}
+.contact-media {
+    margin-bottom: 20px;
+}
+.contact-media p {
+    margin: 0px;
+    padding-bottom: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #18b7bb;
+}
+.contact-media span {
+    color: #fff;
+}
+.contact-media li{
+    list-style: none;
+    padding-bottom: 7px;
+}
+
+.my-custom-class {
+  --background: #222;
+  --spinner-color: #fff;
+
+  color: #fff;
+}

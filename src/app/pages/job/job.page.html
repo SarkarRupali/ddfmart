@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="backbtn">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="logo">
+      <img src="../../../../assets/imgs/logo.png">
+    </div>
+    <ion-buttons slot="end" class="logout" (click) = "logout()">
+      <ion-icon name="power-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content> 
+  <div class="dashboard">
+    <div class="register-con">
+      <ion-card>
+        <ion-list padding *ngFor="let type of typeJob">
+         
+          <ion-buttons (click)="opendjobList(type.id)" class="btnadd">{{type.name}}</ion-buttons>
+        </ion-list>
+        </ion-card>
+
+    </div>
+  </div>
+</ion-content> 
+
+

@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="logo">
+      <img src="../../../../assets/imgs/logo.png">
+    </div>
+    <ion-buttons slot="end" class="logout" (click) = "logout()">
+      <ion-icon name="power-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page" [fullscreen]="true"> 
+  <div class="dashboard">
+    <div class="register-con">
+      <ion-grid>
+        <ion-row>
+          <ion-col [routerLink]="['/health']">
+            <ion-card>
+              <ion-title>Health</ion-title>
+            </ion-card>
+          </ion-col>
+          <ion-col [routerLink]="['/job-loan']">
+            <ion-card>
+              <ion-title>Job/Loan Renewal</ion-title>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      
+        <ion-row>
+          <ion-col [routerLink]="['/matrimony']">
+            <ion-card>
+              <ion-title>Matrimony</ion-title>
+            </ion-card>
+          </ion-col>
+          <ion-col [routerLink]="['/tour-travels']">
+            <ion-card>
+              <ion-title>Tour & Travel</ion-title>
+            </ion-card>
+          </ion-col>
+          
+        </ion-row>
+      
+        <ion-row>
+          <ion-col>
+            <ion-card [routerLink]="['/help-line']">
+              <ion-title>Hotel & Lodge</ion-title>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card [routerLink]="['/help-line']">
+              <ion-title>Property</ion-title>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-card [routerLink]="['/help-line']">
+              <ion-title>Night resque</ion-title>
+            </ion-card>
+          </ion-col>      
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>
+
+
+
+

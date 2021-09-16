@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="logo">
+      <img src="../../../../assets/imgs/logo.png">
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="login">
+    <div class="register-con">
+      <div class="reg-icon">
+        <img src="../../../../assets/imgs/padlock.png">
+      </div>
+      <h4 class="titel">Login</h4>
+      <div class="form-box">
+        <div class="form-list">
+          <form [formGroup]="login_frm" (submit)="submitForm()" #myform="ngForm">
+            <div class="form-list">
+              <ion-item>
+                <ion-label>
+                  <ion-icon name="person-circle-outline"></ion-icon>
+                </ion-label>
+                <ion-input type="text" placeholder="UserName" formControlName='uName'></ion-input>
+              </ion-item>
+            </div>
+            <div>
+              <ng-container *ngIf="login_frm.get('uName').hasError('required') && myform.submitted">
+                <small class="error-message">Please enter user name</small>
+              </ng-container>
+            </div>
+            <div class="form-list">
+              <ion-item >
+                <ion-label>
+                  <ion-icon name="lock-closed-outline"></ion-icon>
+                </ion-label>
+                <ion-input type="password"  placeholder="Password" formControlName='password'></ion-input>
+              </ion-item>
+            </div>
+            <div>
+              <ng-container *ngIf="login_frm.get('password').hasError('required') && myform.submitted">
+                <small class="error-message">Please enter password</small>
+              </ng-container>
+            </div>
+            <div class="form-listbtn">
+              <button type="submit"  >Sign In</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+
+        

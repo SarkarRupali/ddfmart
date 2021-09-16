@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="logo">
+      <img src="../../../../assets/imgs/logo.png">
+    </div>
+    <ion-buttons slot="end" class="logout" (click) = "logout()">
+      <ion-icon name="power-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="dashboard">
+    <div class="register-con">
+      <h4 class="titel">Details</h4>
+      <div *ngFor="let details of matrimonyDetails"> 
+        <div class="contact-media" *ngIf = 'details.meta_key == "designation"'>
+          <p>Designation : {{details.meta_value}}</p>
+        </div>
+        <div class="contact-media" *ngIf = 'details.meta_key == "address"'>
+          <p>Address : {{details.meta_value}}</p>
+        </div>
+        <div class="contact-media" *ngIf = 'details.meta_key == "educational_qualification"'>
+          <p>Educational Qualification : {{details.meta_value}}</p>
+        </div>
+        
+        <div class="contact-media" *ngIf = 'details.meta_key == "contact_no"'>
+          <p>Contact No : {{details.meta_value}} </p>
+        </div>
+        
+        <div class="contact-media" *ngIf = 'details.meta_key == "image"'>
+          <ion-img [src]="details.meta_value"></ion-img>
+        </div> 
+      </div>
+        <div class="form-listbtn">
+          <button class="book" expand="block" [routerLink]="['/thank_you']">Book</button>
+        </div>
+      
+    </div>
+  </div>
+</ion-content>
+

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="logo">
+      <img src="../../../../assets/imgs/logo.png">
+    </div>
+    <ion-buttons slot="end" class="logout" (click) = "logout()">
+      <ion-icon name="power-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="dashboard">
+    <div class="register-con">
+      <h4 class="titel">Job Category</h4>
+      <ion-card>
+        <ion-list padding *ngFor="let type of jobList"> 
+          <!-- <ion-item (click)="opendctrNameList(type.id)" class="ion-activated">
+            <ion-title>{{type.name}}</ion-title>
+            </ion-item> -->
+            <ion-buttons (click)="openjobDetailsList(type.id)" class="btnadd">{{type.name}}</ion-buttons>
+          </ion-list>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
+
+

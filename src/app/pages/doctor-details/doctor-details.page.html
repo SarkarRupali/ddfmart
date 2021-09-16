@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="logo">
+      <img src="../../../../assets/imgs/logo.png">
+    </div>
+    <ion-buttons slot="end" class="logout" (click) = "logout()">
+      <ion-icon name="power-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="dashboard">
+    <div class="register-con">
+      <h4 class="titel">Doctor Details</h4>
+      <div class="contact-media">
+        <p>{{content}}</p>
+      </div>
+      <div class="contact-media">
+        <p> {{specialist}}</p>
+      </div>
+      <div class="contact-media">
+        <p> {{regNo}}</p>
+      </div>
+      <div class="contact-media">
+        <p> {{address}}</p>
+      </div>
+      <div class="contact-media">
+        <p>Open Time : {{openTime}} </p>
+      </div> 
+      <div class="contact-media">
+        <p>{{closeTime}}</p>
+      </div> 
+     
+      <div class="form-listbtn">
+        <button class="book" expand="block" [routerLink]="['/thank_you']">Book</button>
+      </div>
+    </div>
+  </div>
+</ion-content>

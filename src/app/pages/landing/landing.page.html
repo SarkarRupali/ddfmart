@@ -1,0 +1,25 @@
+<ion-content class="auth-form">
+  <div class="dashboard">
+    <div class="register-con">
+      <div class="logo">
+        <img src="../../../assets/imgs/logo.png">
+      </div>
+   
+      <ion-grid>
+        <ion-row>
+          <ion-col align-self-center>
+            <button type="button" [routerLink]="['/register']" expand="block" class="butn">Register</button>
+            <div class="or-al">
+              <span class="divider line one-line">Or</span>
+
+              <span class="already">Already a user?</span>
+            </div>
+              <!-- <ion-button [routerLink]="['/login']" expand="block" color="danger">Sign In</ion-button> -->
+            <button type="button" [routerLink]="['/login']" expand="block" class="butn">Sign In</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>
+  

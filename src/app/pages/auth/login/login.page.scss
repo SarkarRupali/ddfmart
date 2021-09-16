@@ -1,0 +1,121 @@
+// .login {
+//     background: #fff;
+//     width: 100%;
+//     height: 100%;
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+.login {
+    background: #d4d6d60f;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login::before{
+    content: "";
+    width: 70px;
+    height: 70px;
+    border-radius: 85px;
+    background-color: rgba(24, 183, 187, 0.2);
+    position: absolute;
+    top: 24%;
+    left: 0px;
+    transform: translate(-10px, -24%);
+}
+.login::after{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 85px;
+    background-color: rgba(246, 211, 93, 0.4);
+    position: absolute;
+    bottom: 9%;
+    right: -10px;
+    transform: translate(-10px, -41%);
+}
+.form-box .form-list {
+    position: relative;
+    margin-bottom: 10px;
+}
+.form-box .form-list input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    text-indent: 20px;
+    color: #fff;
+    font-size: 18px;
+    box-shadow: none;
+}
+.form-box .form-list .iconfo {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #adacad;
+}
+ .form-list ion-item {
+    --ion-background-color: transparent !important;
+    --ion-border-color: transparent !important;
+    border:1px solid #18b7bb  ;
+        color: #18b7bb;
+}
+.form-box  .form-listbtn {
+    margin-top: 25px;
+}
+.form-box .form-listbtn button {
+    width: 100%;
+    height: 54px;
+    background-image: linear-gradient(to left top, #19c5c9, #19c7cb, #19c8cd, #19cacf, #19ccd1);
+    border: 0px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+.error-message {
+    color: var(--ion-color-danger);
+    margin-bottom: 10px;
+    display: block;
+}
+
+button:focus{
+    outline: none;
+}
+
+.logo{
+    text-align: center;
+    width: 224px;
+    margin: 0 auto;
+}
+.reg-icon {
+    width: 70px;
+    height: 70px;
+    padding: 12px;
+    background-image: linear-gradient(to left top, #19c5c9, #19c7cb, #19c8cd, #19cacf, #19ccd1);
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 13px;
+    border: 1px solid #ffffff;
+}
+.titel{
+    font-size: 18px;
+    text-align: center;
+    color: #000;text-transform: uppercase;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+.register-con {
+   width: 100%;
+}
+.login form {
+    width: 84%;
+    margin: 0 auto;
+}
